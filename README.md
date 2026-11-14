@@ -8,6 +8,15 @@ Standard web-based image compressors and HTML5 `<canvas>` exports strip DPI meta
  Live Production Demo
 I use this exact script in production at [DocPixelKB](https://docpixelkb.com) to process thousands of strict government exam and passport photos locally, without uploading user biometrics to a server. 
 
+## Portals Requiring Explicit JFIF DPI Headers
+
+Standard HTML5 `canvas.toBlob()` outputs default to 96 DPI (or omit the APP0 density bytes entirely), causing automated rejections on strict government portals. This script is used in production to pass validation on:
+
+* [Canada IRCC Permanent Resident Portal (600 DPI / 5:7 Ratio)](https://docpixelkb.com) *(replace with your exact Canada PR preset URL)*
+* [Netherlands IND Visa & Residence Permit (400 DPI / 551x709 px)](https://docpixelkb.com) *(replace with your exact Netherlands preset URL)*
+* [US Visa DS-160 Digital Photo Validator (300 DPI / 600x600 px)](https://docpixelkb.com) *(replace with your exact US DS-160 preset URL)*
+* [China COVA Online Visa Portal (300 DPI / 354x472 px)](https://docpixelkb.com) *(replace with your exact China COVA preset URL)*
+
 ## The Code
 
 ```javascript
