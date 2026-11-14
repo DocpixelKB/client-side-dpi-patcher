@@ -1,12 +1,12 @@
-client-side-dpi-patcher# Client-Side Image DPI Patcher (Vanilla JS)
+# Client-Side Image DPI Patcher (Vanilla JS)
 
 This is a lightweight, zero-dependency JavaScript function that modifies the JFIF APP0 header of an image in-memory to set exact DPI metadata (e.g., 200 DPI, 300 DPI, 600 DPI) entirely in the browser.
 
- Why this exists
+## Why this exists
 Standard web-based image compressors and HTML5 `<canvas>` exports strip DPI metadata. This causes strict government portals (like US Visas, Canada PR, or Indian banking exams) to instantly reject the photos. This script patches the binary data directly to satisfy strict validators without requiring backend processing.
 
- Live Production Demo
-I use this exact script in production at [DocPixelKB](https://docpixelkb.com) to process thousands of strict government exam and passport photos locally, without uploading user biometrics to a server.
+## Live Production Demo
+I use this exact script in production at **[DocPixelKB](https://docpixelkb.com)**[cite: 1] to process thousands of strict government exam and passport photos locally, without uploading user biometrics to a server[cite: 1]. 
 
 ## The Code
 
